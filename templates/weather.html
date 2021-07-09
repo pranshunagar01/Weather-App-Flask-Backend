@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: #EECDA3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            align-content: center;
+            padding: 15% 35% 15% 35%;
+            font-family: 'Yomogi', cursive;
+        }
+        .main{
+            background: #EECDA3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            padding: 3% 10% 10% 10%;
+            display: inline-block;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 10px 10px 20px grey;
+            text-align: left;            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2><u>The Weather App</u></h2>
+        <p>City Name : {{cityname}}</p>
+        <p>Temperature : {{temperature}} °C</p>
+        <p>Description : {{description}}</p>
+        <p>Country : {{country}}</p>
+    </div>
+</body>
+</html>

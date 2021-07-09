@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: #EECDA3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            align-content: center;
+            padding: 15% 35% 15% 35%;
+            font-family: 'Yomogi', cursive;
+        }
+        .main{
+            background: #EECDA3;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            padding: 3% 10% 10% 10%;
+            display: inline-block;
+            text-align: center;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 10px 10px 20px grey;
+            
+
+        }
+        .submit{
+            margin-top: 3%;
+            height: 30px;
+            width: 100px;
+            font-family: 'Yomogi', cursive;
+            font-size: 1rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px grey;
+            border: none;
+            font-weight: bold;
+        }
+        .name{
+            margin-top: 20%;
+            font-size: 1.4rem;
+        }
+        .box{
+            height: 30px;
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px grey;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2><u>The Weather App</u></h2>
+        <form action="https://weather-app-1app.herokuapp.com/weather", method="post">
+            <p class="name">City Name : <input type="text", name = "cityname" class="box"></p>
+            <p><input type="submit" value="Submit" class="submit"></p>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <div class="alert alert-primary" role="alert"><p>{{ message }}</p></div>
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}
+</body>
+</html>
